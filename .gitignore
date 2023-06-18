@@ -1,0 +1,8 @@
+/dto/__pycache__
+/repository/__pycache__
+/config/__pycache__
+/models/__pycache__
+/__pycache__
+/service/__pycache__
+/router/__pycache__
+.DS_Store
