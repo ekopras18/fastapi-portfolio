@@ -1,9 +1,13 @@
 from datetime import datetime, timedelta
 from jose import JWTError, jwt
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class ServiceJWT:
   def __init__(self) -> None:
-    self.SECRET_KEY = "14fe5656c4b589be5fcf5bb436f2507c2c82d4bc4ab6b763b59f087e0b95ddff"
+    self.SECRET_KEY = os.getenv("API_KEY")
     self.ALGORITHM = "HS256"
     self.ACCESS_TOKEN_EXPIRE_MINUTES = 30
     

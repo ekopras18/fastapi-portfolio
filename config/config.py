@@ -1,6 +1,10 @@
+import os
 import pymongo
+from dotenv import load_dotenv
 
-client = pymongo.MongoClient("mongodb+srv://mrepras:dXNVcUjJZDHPAPes@mre.jkgdtj3.mongodb.net/?retryWrites=true&w=majority")
+load_dotenv()
+
+client = pymongo.MongoClient(os.getenv("MONGO_URI"))
 try:
     db = client.get_database("fastapi-portfolio")
     print("DB : Successfully connected to MongoDB!")
