@@ -30,9 +30,9 @@ uvicorn main:app --reload
 
 - [GET] `/api/v1/portfolio` - Get all portfolio
 - [POST] `/api/v1/portfolio` - Create portfolio
-- [GET] `/api/v1/portfolio/{id}` - Get portfolio by id
-- [PUT] `/api/v1/portfolio/{id}` - Update portfolio by id
-- [DELETE] `/api/v1/portfolio/{id}` - Delete portfolio by id
+- [GET] `/api/v1/portfolio/{id}` - Get portfolio by id (On Progress)
+- [PUT] `/api/v1/portfolio/{id}` - Update portfolio by id (On Progress)
+- [DELETE] `/api/v1/portfolio/{id}` - Delete portfolio by id (On Progress)
 
 # Preview FastAPI Portfolio
 
