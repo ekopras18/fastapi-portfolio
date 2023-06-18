@@ -22,3 +22,7 @@ pip install -r requirements.txt
 ```bash
 uvicorn main:app --reload
 ```
+
+## Preview
+
+[![preview images](preview.png)](#)
