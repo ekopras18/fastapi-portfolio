@@ -24,24 +24,16 @@ uvicorn main:app --reload
 ```
 # Endpoints
 1. Docs
-<hr/>
-
 - [GET] `/` - Docs
-- [GET] `/redoc` - Redocs
+- [GET] `/redocs` - Redocs
 
 2. Auth
-<hr/>
-
 - [POST] `/api/auth` - Login Auth
 
 3. Users
-<hr/>
-
 - [POST] `/api/v1/users` - Create user
 
 4. Portfolio
-<hr/>
-
 - [GET] `/api/v1/portfolio` - Get all portfolio
 - [POST] `/api/v1/portfolio` - Create portfolio
 - [GET] `/api/v1/portfolio/{id}` - Get portfolio by id (On Progress)
