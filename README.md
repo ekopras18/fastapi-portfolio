@@ -23,10 +23,24 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 # Endpoints
+1. Docs
+<hr/>
+
 - [GET] `/` - Docs
+- [GET] `/redoc` - Redocs
+
+2. Auth
+<hr/>
+
+- [POST] `/api/auth` - Login Auth
+
+3. Users
+<hr/>
 
 - [POST] `/api/v1/users` - Create user
-- [POST] `/api/v1/login` - Login user
+
+4. Portfolio
+<hr/>
 
 - [GET] `/api/v1/portfolio` - Get all portfolio
 - [POST] `/api/v1/portfolio` - Create portfolio
