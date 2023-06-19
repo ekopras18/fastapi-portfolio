@@ -1,28 +1,27 @@
-from typing import Optional
 from fastapi import Depends, HTTPException
 from dto.dt_base import TokenData
-from dto.dt_users import InputUsers, InputLogin
+from dto.dt_users import InputLogin
 from service import sr_security
 from service.sr_jwt import ServiceJWT
-from repository.rp_users import RepositoryUsers
+from repository.rp_auth import RepositoryAuth
 
 
-class ServiceUsers:
-  def __init__(self, repository: RepositoryUsers = Depends(), sr_jwt: ServiceJWT = Depends()):
+class ServiceAuth:
+  def __init__(self, repository: RepositoryAuth = Depends(), sr_jwt: ServiceJWT = Depends()):
     self.repository = repository
     self.security = sr_security
     self.jwt = sr_jwt
     
-  def insert(self, new_users: InputUsers):
-    check_email = self.repository.find_user_by_email(new_users.email)
-    if check_email is not None:
-      # raise HTTPException(400, detail="Email already exists")
-      return None
+  # def insert(self, new_users: InputUsers):
+  #   check_email = self.repository.find_user_by_email(new_users.email)
+  #   if check_email is not None:
+  #     # raise HTTPException(400, detail="Email already exists")
+  #     return None
     
-    # hash password
-    new_users.password = self.security.get_password_hash(new_users.password)
+  #   # hash password
+  #   new_users.password = self.security.get_password_hash(new_users.password)
     
-    return self.repository.insert(new_users)
+  #   return self.repository.insert(new_users)
   
   def login_user(self, input_login: InputLogin):
     found_user = self.repository.find_user_by_email(input_login.email)

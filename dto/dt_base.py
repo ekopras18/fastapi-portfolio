@@ -12,9 +12,9 @@ class ResponseWithData(BaseModel):
   Message: str
   Data: Any = []
   
-# class TokenData(BaseModel):
-#   userid: str
-#   email: str
+class TokenData(BaseModel):
+  userid: str
+  email: str
   
 class OutputAuth(BaseModel):
   access_token: str
